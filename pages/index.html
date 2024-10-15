@@ -1,34 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>KRDS themplate</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="페이지 제목" />
+        <meta property="og:description" content="페이지 설명" />
+        <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+        <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="페이지 제목" />
+        <meta name="twitter:description" content="페이지 설명" />
+        <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:domain" content="사이트 명" />
+        <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../resources/css/style.css" />
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
-        <div id="wrap">
-            <header>
-                <h1>
-                    <a href="#">logo</a>
-                </h1>
-                <nav id="gnb">
-                    <ul>
-                        <li>
-                            <a href="#">menu1</a>
-                            <ul>
-                                <li><a href="#">menu1</a></li>
-                                <li><a href="#">menu2</a></li>
-                                <li><a href="#">menu3</a></li>
-                                <li><a href="#">menu4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">menu2</a></li>
-                        <li><a href="#">menu3</a></li>
-                        <li><a href="#">menu4</a></li>
-                    </ul>
-                </nav>
-            </header>
+        <div id="skip-nav">
+            <a href="#gnb">메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
         </div>
+        <div id="wrap">
+            <header id="header"></header>
+            <div class="slide">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="#"
+                                ><img
+                                    src="https://i.pinimg.com/564x/cd/56/1d/cd561dcd76cd32b7a9d0f2524c884088.jpg"
+                                    alt="Ekaterina Peganova"
+                            /></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"
+                                ><img
+                                    src="https://i.pinimg.com/564x/f7/d6/65/f7d665d5ea4b5e11753995b3578c7ceb.jpg"
+                                    alt=" 
+                        3cm"
+                            /></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"
+                                ><img
+                                    src="https://i.pinimg.com/564x/a7/3c/18/a73c18f7c34abadcdd8b9c7abc1bea72.jpg"
+                                    alt="Donna Bouma"
+                            /></a>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <main id="container">content</main>
+            <footer id="footer">footer</footer>
+        </div>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                // direction: 'vertical',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        </script>
     </body>
 </html>
