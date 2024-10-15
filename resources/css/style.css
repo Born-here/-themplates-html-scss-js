@@ -3169,7 +3169,7 @@ input[type=checkbox] {
 }
 
 :root {
-  --swiper-theme-color: $primary;
+  --swiper-theme-color: $gray;
 }
 
 .swiper {
