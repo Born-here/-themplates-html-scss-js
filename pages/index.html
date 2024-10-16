@@ -29,31 +29,53 @@
         <div id="wrap">
             <header id="header"></header>
             <div class="slide">
-                <div class="swiper">
+                <div class="slide-intro">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <a href="#"
-                                ><img
+                            <a href="#">
+                                <img
                                     src="https://i.pinimg.com/564x/cd/56/1d/cd561dcd76cd32b7a9d0f2524c884088.jpg"
                                     alt="Ekaterina Peganova"
-                            /></a>
+                                />
+                                <div class="text-area">
+                                    <strong class="text-area__tit">슬라이드 제목</strong>
+                                    <p class="text-area__cont">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
+                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                </div></a
+                            >
                         </div>
                         <div class="swiper-slide">
                             <a href="#"
                                 ><img
                                     src="https://i.pinimg.com/564x/f7/d6/65/f7d665d5ea4b5e11753995b3578c7ceb.jpg"
-                                    alt=" 
-                        3cm"
-                            /></a>
+                                    alt="3cm"
+                                />
+                                <div class="text-area">
+                                    <strong class="text-area__tit">슬라이드 제목</strong>
+                                    <p class="text-area__cont">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur,
+                                        voluptatem.
+                                    </p>
+                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#"
                                 ><img
                                     src="https://i.pinimg.com/564x/a7/3c/18/a73c18f7c34abadcdd8b9c7abc1bea72.jpg"
                                     alt="Donna Bouma"
-                            /></a>
+                                />
+                                <div class="text-area">
+                                    <strong class="text-area__tit">슬라이드 제목</strong>
+                                    <p class="text-area__cont">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                </div></a
+                            >
                         </div>
                     </div>
                     <!-- If we need pagination -->
@@ -62,9 +84,6 @@
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
             <main id="container">content</main>
@@ -72,7 +91,7 @@
         </div>
 
         <script>
-            var swiper = new Swiper('.swiper', {
+            var swiper = new Swiper('.slide-intro', {
                 slidesPerView: 1,
                 spaceBetween: 10,
                 pagination: {
@@ -81,15 +100,15 @@
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 2,
                         spaceBetween: 40,
                     },
                     1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 3,
                         spaceBetween: 50,
                     },
                 },
