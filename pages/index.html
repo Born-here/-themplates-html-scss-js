@@ -17,6 +17,10 @@
         <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
         <!-- css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
         <link rel="stylesheet" href="../resources/css/style.css" />
         <!-- js -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -24,12 +28,12 @@
     <body>
         <div id="skip-nav">
             <a href="#gnb">메뉴 바로가기</a>
-            <a href="#container">본문 바로가기</a>
+            <a href="#container"> </a>
         </div>
         <div id="wrap">
             <header id="header"></header>
             <div class="slide">
-                <div class="slide-intro">
+                <div class="swiper slide-intro">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -38,13 +42,17 @@
                                 <img
                                     src="https://i.pinimg.com/564x/cd/56/1d/cd561dcd76cd32b7a9d0f2524c884088.jpg"
                                     alt="Ekaterina Peganova"
+                                    class="laundry"
                                 />
                                 <div class="text-area">
-                                    <strong class="text-area__tit">슬라이드 제목</strong>
-                                    <p class="text-area__cont">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </p>
-                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    <div class="inner">
+                                        <strong class="text-area__tit">양말 빨래</strong>
+                                        <p class="text-area__cont">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                                            exercitationem?
+                                        </p>
+                                        <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    </div>
                                 </div></a
                             >
                         </div>
@@ -55,12 +63,14 @@
                                     alt="3cm"
                                 />
                                 <div class="text-area">
-                                    <strong class="text-area__tit">슬라이드 제목</strong>
-                                    <p class="text-area__cont">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur,
-                                        voluptatem.
-                                    </p>
-                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    <div class="inner">
+                                        <strong class="text-area__tit">꽃은 양말에서</strong>
+                                        <p class="text-area__cont">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis
+                                            dolore delectus iusto voluptatum.
+                                        </p>
+                                        <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -71,9 +81,52 @@
                                     alt="Donna Bouma"
                                 />
                                 <div class="text-area">
-                                    <strong class="text-area__tit">슬라이드 제목</strong>
-                                    <p class="text-area__cont">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    <div class="inner">
+                                        <strong class="text-area__tit">나를 다리다</strong>
+                                        <p class="text-area__cont">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing.
+                                        </p>
+                                        <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    </div>
+                                </div></a
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img
+                                    src="https://i.pinimg.com/564x/25/7d/67/257d673c0b223380626bcc02a731e585.jpg"
+                                    alt="Kyle Thompson"
+                                    class="healing"
+                                />
+                                <div class="text-area">
+                                    <div class="inner">
+                                        <strong class="text-area__tit">쉼</strong>
+                                        <p class="text-area__cont">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit molestias,
+                                            recusandae vel repudiandae neque quo quibusdam nam tenetur aspernatur
+                                            praesentium.
+                                        </p>
+                                        <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    </div>
+                                </div></a
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img
+                                    src="https://i.pinimg.com/564x/a0/87/c1/a087c1f65f2b24c38e75761bab773bcf.jpg"
+                                    alt="Maria de Lourdes Arruda"
+                                    class="paper"
+                                />
+                                <div class="text-area">
+                                    <div class="inner">
+                                        <strong class="text-area__tit">속에는 길이</strong>
+                                        <p class="text-area__cont">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eveniet, ab
+                                            quibusdam ipsam officia harum distinctio omnis eligendi!
+                                        </p>
+                                        <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                                    </div>
                                 </div></a
                             >
                         </div>
@@ -86,7 +139,117 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <main id="container">content</main>
+            <main id="container">
+                <section class="sec-g sec-objb">
+                    <div class="inner">
+                        <h2 class="sec-g__tit">오브젝트 본</h2>
+                        <div class="sec-g__cont">
+                            <div class="swiper slide-objb">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img
+                                                src="https://i.pinimg.com/564x/09/b9/a5/09b9a50237931465d24ef59b4ca6ea97.jpg"
+                                                alt="Олень"
+                                            />
+                                            <strong>떡볶이 5000원어치</strong>
+                                            <em>2024.10.15</em>
+                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/fd/29/7e/fd297e4e3894d74ba97b4589d823d0a9.jpg"
+                                                alt="jemma"
+                                            /><strong>궁중떡볶이인가 짜장떡볶이인가?</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/3f/8d/c3/3f8dc32808acff285640ec46a876950a.jpg"
+                                                alt="Maker&Son Board"
+                                            /><strong>바나나 떡볶이는 맛있을까 의문</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/c1/9e/52/c19e52ced6735844be32755282d3e6b0.jpg"
+                                                alt="jAS Photo"
+                                            /><strong>앞으로는 같이 먹도록 해</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/cb/07/96/cb0796cb767c7f8bf8aa2489518541d0.jpg"
+                                                alt="max rains"
+                                            /><strong>말라 비틀어진 컵 떡볶이</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/236x/d3/bd/cb/d3bdcbbe6bdcbc01815bf37970478a66.jpg"
+                                                alt="Izzie Kruegee"
+                                            /><strong>진짜 짜증나게 하지마라;;</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/40/b6/7d/40b67dab5ddbafbb2c793f2350c56cb2.jpg"
+                                                alt="Mw Lu-lav"
+                                            /><strong>이건마치 혜승이랑 현지</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/92/5b/9d/925b9d2e4aa1f846b1bb502e51793d77.jpg"
+                                                alt="modelsdotcom"
+                                            /><strong>혜승이랑 현지222</strong> <em>2024.10.15</em></a
+                                        >
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a href="#"
+                                            ><img
+                                                src="https://i.pinimg.com/564x/dd/fb/1c/ddfb1c60fe29a3b8357075f85ce25d54.jpg"
+                                                alt="Isabel Loen"
+                                            /><strong>사실 마복림할머니 떡볶이는 볶음밥이 최고</strong>
+                                            <em>2024.10.15</em>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="sec-g__more">더보기</a>
+                    </div>
+                </section>
+                <section class="sec-g sec-news bg-pm10">
+                    <div class="inner">
+                        <h2 class="sec-g__tit">아뜰리에 소식</h2>
+                        <div class="sec-g__cont">컨텐츠</div>
+                        <a href="#" class="sec-g__more">더보기</a>
+                    </div>
+                </section>
+                <section class="sec-g sec-notice">
+                    <div class="inner">
+                        <h2 class="sec-g__tit">공지사항</h2>
+                        <div class="sec-g__cont">컨텐츠</div>
+                        <a href="#" class="sec-g__more">더보기</a>
+                    </div>
+                </section>
+            </main>
             <footer id="footer">footer</footer>
         </div>
 
@@ -108,8 +271,26 @@
                         spaceBetween: 40,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
                         spaceBetween: 50,
+                    },
+                },
+            });
+            var swiper = new Swiper('.slide-objb', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
                     },
                 },
             });

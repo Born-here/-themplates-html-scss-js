@@ -1,2 +1,56 @@
 // 사이트 레이아웃 관련 요소
 // ex. wrap, header, footer, aside...
+
+.bg-pm10 {
+    background-color: $primary-10;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    // gap: 50px;
+    min-height: 100vh;
+    padding-top: 2.34375vw;
+    padding-bottom: 100px;
+}
+// grid layout 설정
+.inner {
+    position: relative;
+    width: 100%;
+    max-width: $grid;
+    margin: 0 auto;
+    padding: 0 $p-mobile;
+    @include tablet {
+        padding: 0 $p-tablet;
+    }
+}
+.sec-g {
+    // margin-bottom: 100px;
+    padding: 10vw 0;
+
+    &__tit {
+        padding-bottom: 2.34375vw;
+        font-size: 3rem;
+    }
+    &__more {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        justify-content: center;
+        right: 30px;
+        font-size: 2rem;
+        &::after {
+            content: '\f061';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: $gray-20;
+            border-radius: 50%;
+        }
+    }
+}

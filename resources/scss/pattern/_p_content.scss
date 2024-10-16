@@ -1,8 +1,8 @@
 // 사이트 컨텐츠 내용
-#skip-nav,
-#header {
-    display: none;
-}
+// #skip-nav,
+// #header {
+//     display: none;
+// }
 :root {
     --swiper-theme-color: $gray;
 }
@@ -15,7 +15,7 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: $white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +31,27 @@
         height: 100%;
     }
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next::before {
+    content: '\f0da';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 4rem;
+    color: $white;
+}
+.swiper-button-prev::before {
+    content: '\f0d9';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 4rem;
+    color: $white;
+}
+
 .slide-intro {
     .swiper-slide {
         position: relative;
@@ -39,26 +60,46 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70%;
-            max-width: 400px;
+            width: 100%;
+            max-width: none;
             &__tit {
                 font-size: 3rem;
-                color: #ffff;
+                color: $white;
             }
             &__cont {
-                color: $gray-90;
+                font-size: 2rem;
+                color: $gray-10;
             }
             &__goto {
-                display: inline-block;
-                margin-top: 20px;
+                display: inline-flex;
+                margin-top: 30px;
                 padding: 7px 30px;
                 background: $primary-40;
-                color: #fff;
+                color: $white;
+                border-color: $white;
                 border-radius: 10px;
             }
         }
         img {
             height: 50vh;
+            object-position: 50% 50%;
+        }
+        .laundry {
+            object-position: 50% 100%;
+        }
+        a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: inherit;
+            background-color: rgba(0, 0, 0, 9%);
+            transform: translateZ(0);
+            perspective: 1px;
         }
     }
 
@@ -91,4 +132,27 @@
     .slide-intro .swiper-button-next {
         display: none;
     }
+}
+
+.slide-objb {
+    overflow: visible;
+    width: 80%;
+    margin-left: 0;
+    @include mobileMore {
+        width: 90%;
+    }
+    @include tabletMore {
+        width: 100%;
+        margin-left: auto;
+    }
+    img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    // .swiper-pagination {
+    //     bottom: -50px;
+    // }
 }
