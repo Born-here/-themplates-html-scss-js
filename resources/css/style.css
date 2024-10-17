@@ -3205,10 +3205,15 @@ input[type=checkbox] {
   align-items: center;
   gap: 10px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 20px;
   transform: translate(0, 0);
   font-size: 1.5rem;
+}
+@media (min-width: 600px) {
+  .sec-g__more {
+    right: 30px;
+  }
 }
 .sec-g__more::after {
   content: "\f061";
