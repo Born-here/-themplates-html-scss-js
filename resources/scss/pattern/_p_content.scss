@@ -55,13 +55,21 @@
 .slide-intro {
     .swiper-slide {
         position: relative;
+        &.swiper-slide-active {
+            .text-area {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
         .text-area {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 0);
             width: 100%;
             max-width: none;
+            opacity: 0;
+            transition: all 0.5s;
             &__tit {
                 font-size: 3rem;
                 color: $white;
@@ -87,20 +95,20 @@
         .laundry {
             object-position: 50% 100%;
         }
-        a::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: inherit;
-            background-color: rgba(0, 0, 0, 9%);
-            transform: translateZ(0);
-            perspective: 1px;
-        }
+        // a::after {
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     border: 1px solid rgba(0, 0, 0, 0.06);
+        //     border-radius: inherit;
+        //     background-color: rgba(0, 0, 0, 9%);
+        //     transform: translateZ(0);
+        //     perspective: 1px;
+        // }
     }
 
     .swiper-pagination {

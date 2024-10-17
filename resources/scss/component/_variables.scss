@@ -200,6 +200,52 @@ $font-size: (
     ),
 ) !default;
 
+// Display font sizes
+$font-size-display-sm: 4rem !default;
+$font-size-display-md: 5rem !default;
+$font-size-display-lg: 6.6rem !default;
+
+// Heading font sizes
+$font-size-heading-sm: 3.2rem !default;
+$font-size-heading-md: 4rem !default;
+$font-size-heading-lg: 5rem !default;
+
+// Title font sizes
+$font-size-title-xsm: 1.5rem !default;
+$font-size-title-sm: 1.7rem !default;
+$font-size-title-md: 1.9rem !default;
+$font-size-title-lg: 2.1rem !default;
+$font-size-title-xlg: 2.5rem !default;
+$font-size-title-xxlg: 3.2rem !default;
+
+// Body font sizes
+$font-size-body-sm: 1.5rem !default;
+$font-size-body-md: 1.7rem !default;
+$font-size-body-lg: 1.9rem !default;
+
+// Link font sizes
+$font-size-link-sm: 1.5rem !default;
+$font-size-link-md: 1.7rem !default;
+$font-size-link-lg: 1.9rem !default;
+
+// Detail font sizes
+$font-size-detail-sm: 1.3rem !default;
+$font-size-detail-md: 1.5rem !default;
+$font-size-detail-lg: 1.7rem !default;
+
+// Label font sizes
+$font-size-label-xsm: 1.3rem !default;
+$font-size-label-sm: 1.5rem !default;
+$font-size-label-md: 1.7rem !default;
+$font-size-label-lg: 1.9rem !default;
+
+//font weight
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-medium: 500 !default;
+$font-bold: 700 !default;
+$font-bolder: 800 !default;
+
 $fws: (
     'light': 300,
     'normal': 400,

@@ -3193,6 +3193,47 @@ input[type=checkbox] {
   }
 }
 
+#skip-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  text-align: center;
+  background-color: #1d1d1d;
+}
+#skip-nav a:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+#skip-nav a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  outline-offset: -0.4rem;
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100%;
+  height: 3.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+#skip-nav.type1 {
+  background-color: #fff;
+}
+#skip-nav.type1 a:focus {
+  color: #1d1d1d;
+}
+
 .sec-g {
   padding: 30vw 0;
 }
@@ -3218,7 +3259,7 @@ input[type=checkbox] {
 .sec-g__more::after {
   content: "\f061";
   font-family: "Line Awesome Free";
-  font-weight: 1000;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3226,6 +3267,210 @@ input[type=checkbox] {
   height: 30px;
   background: #e4e4e4;
   border-radius: 50%;
+}
+
+#header {
+  position: relative;
+  z-index: 1000;
+}
+#header.active::before {
+  display: block;
+}
+#header.active .gnb__depth2 {
+  display: block;
+}
+#header.active::before {
+  content: "";
+  position: absolute;
+  top: 102px;
+  left: 0;
+  width: 100%;
+  height: 206px;
+  background: #f8f8f8;
+}
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  #header .inner {
+    height: auto;
+  }
+}
+#header .inner #logo {
+  transform: scale(0.8);
+  transform-origin: 0 50%;
+}
+@media (min-width: 1024px) {
+  #header .inner #logo {
+    transform: none;
+  }
+}
+#header .inner #logo a {
+  display: block;
+  margin-top: 25px;
+  width: 200px;
+  height: 50px;
+  background: url(/resources/images/pattern/common/head-logo.png) no-repeat 0 0;
+  background-size: contain;
+}
+#header .inner #logo span {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.gnb {
+  display: none;
+  position: relative;
+}
+.gnb__depth1 {
+  display: flex;
+  background: #fff;
+}
+.gnb__depth1 > li {
+  position: relative;
+}
+.gnb__depth1 > li:hover > a > span {
+  color: #29a738;
+}
+.gnb__depth1 > li:hover > a > span::after {
+  width: 100%;
+}
+.gnb__depth1 > li:first-child .gnb__depth2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #e4e4e4;
+}
+.gnb__depth1 > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 102px;
+  font-size: 2rem;
+  padding: 0 40px;
+  text-decoration-line: inherit;
+}
+.gnb__depth1 > li > a span {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.gnb__depth1 > li > a span::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #29a738;
+  transition: all 0.3s ease-out;
+}
+.gnb__depth2 {
+  display: none;
+  position: absolute;
+  top: 102px;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.gnb__depth2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: #e4e4e4;
+}
+.gnb__depth2 a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 13px 0;
+  color: #555555;
+}
+.gnb__depth2 a a:hover {
+  font-weight: 800;
+  color: #1d1d1d;
+}
+
+.util {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  position: relative;
+}
+.util .search {
+  transform: scaleX(-1);
+}
+.util .search::before {
+  content: "\f002";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.8rem;
+}
+.util .all-menu::before {
+  content: "\f805";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.8rem;
+}
+.util .lang {
+  position: relative;
+}
+.util .lang.active .lang__btn::after {
+  content: "\f106";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+.util .lang.active .lang__lst {
+  display: block;
+}
+.util .lang__btn::after {
+  content: "\f107";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-left: 5px;
+  color: #8e8e8e;
+}
+.util .lang::before {
+  content: "\f0ac";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.8rem;
+  position: absolute;
+  top: 23%;
+  right: 110%;
+}
+.util .lang__lst {
+  display: none;
+  position: absolute;
+  top: 102px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+}
+.util .lang__lst li {
+  width: 100%;
+  background: white;
+  border: 1px solid #c6c6c6;
+  text-align: center;
 }
 
 :root {
@@ -3282,13 +3527,19 @@ input[type=checkbox] {
 .slide-intro .swiper-slide {
   position: relative;
 }
+.slide-intro .swiper-slide.swiper-slide-active .text-area {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
 .slide-intro .swiper-slide .text-area {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   width: 100%;
   max-width: none;
+  opacity: 0;
+  transition: all 0.5s;
 }
 .slide-intro .swiper-slide .text-area__tit {
   font-size: 3rem;
@@ -3315,20 +3566,6 @@ input[type=checkbox] {
 .slide-intro .swiper-slide .laundry {
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
-}
-.slide-intro .swiper-slide a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: inherit;
-  background-color: rgba(0, 0, 0, 0.09);
-  transform: translateZ(0);
-  perspective: 1px;
 }
 .slide-intro .swiper-pagination {
   display: none;
