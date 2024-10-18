@@ -60,6 +60,7 @@
 
 // section layout
 .sec-g {
+  overflow: hidden;
   padding: 10vw 0;
   &__tit {
     padding-bottom: 2.34375vw;
@@ -97,22 +98,22 @@
   z-index: 1000;
   &.active {
     &::before {
-      display: block;
+      height: 266px;
     }
     .gnb__depth2 {
-      display: block;
+      height: 266px;
     }
   }
   &::before {
     content: '';
-    display: none;
     position: absolute;
     top: 102px;
     left: 0;
     right: 0;
     width: 100%;
-    height: 266px;
+    height: 0;
     background: $gray-5;
+    transition: all 0.3s;
   }
   .inner {
     display: flex;
@@ -206,11 +207,12 @@
   }
 
   .gnb__depth2 {
-    // display: none;
+    display: none;
     position: absolute;
     top: 102px;
     left: 0;
     right: 0;
+    height: 0;
     padding: 30px 0;
     background: $white;
     &::after {
@@ -276,7 +278,7 @@
       right: 28px;
     }
     &__lst {
-      display: block;
+      display: none;
       position: absolute;
       top: 54px;
       left: -38px;
