@@ -3460,6 +3460,7 @@ input[type=checkbox] {
   left: -38px;
   width: 120px;
   border: 1px solid #c6c6c6;
+  border-radius: 10px;
   background: #fff;
   text-align: center;
   transform: translateX(-50%);
@@ -3583,7 +3584,10 @@ input[type=checkbox] {
 }
 .slide-intro .swiper-slide .text-area__goto {
   display: inline-flex;
-  margin-top: 30px;
+  width: 110px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
   padding: 7px 30px;
   background: #53b85f;
   color: #fff;
@@ -3595,9 +3599,13 @@ input[type=checkbox] {
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
 }
+.slide-intro .swiper-slide .flower {
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+}
 .slide-intro .swiper-slide .laundry {
-  -o-object-position: 50% 100%;
-     object-position: 50% 100%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 .slide-intro .swiper-pagination {
   display: none;
@@ -3609,12 +3617,20 @@ input[type=checkbox] {
 
 @media screen and (min-width: 600px) {
   .slide-intro .swiper-slide img {
-    height: 70vh;
+    height: 80vh;
+    -o-object-position: 50% 40%;
+       object-position: 50% 40%;
   }
 }
 @media screen and (min-width: 1024px) {
   .slide-intro .swiper-slide img {
-    height: 90vh;
+    height: 62vh;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .slide-intro .swiper-slide .flower {
+    -o-object-position: 50% 33%;
+       object-position: 50% 33%;
   }
   .slide-intro .swiper-pagination {
     display: block;
