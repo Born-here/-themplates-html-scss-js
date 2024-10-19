@@ -3308,7 +3308,7 @@ input[type=checkbox] {
   margin-top: 25px;
   width: 200px;
   height: 50px;
-  background: url(-themplates-html-scss-js/resources/images/pattern/common/head-logo.png) no-repeat center center/contain;
+  background: url(/-themplates-html-scss-js/resources/images/pattern/common/head-logo.png) no-repeat center center/contain;
 }
 #header #logo span {
   position: absolute !important;
